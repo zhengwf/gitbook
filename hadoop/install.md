@@ -81,3 +81,5 @@ The key's randomart image is:
    source /etc/profile
    ```  
    #### 安装hadoop 
+   ```
+   ```
