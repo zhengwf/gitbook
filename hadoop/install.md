@@ -70,5 +70,6 @@ The key's randomart image is:
   ```
    #### 安装java 
    ```
+   #解压tar包
    
    ```   
