@@ -29,6 +29,7 @@
    - 安装hadoop
    
   #### 创建hadoop用户，并做免密 
+  
    ```
 #添加hadoop用户
 [root@hadoop001 ~]# useradd hadoop 
