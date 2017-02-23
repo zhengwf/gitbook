@@ -23,7 +23,10 @@
     4. 格式化zk，namenode  
     5. 启动服务
 # 单机模式
-   
+   ### 单机搭建步骤
+   - 创建hadoop用户，对hadoop用户做本地免密
+   - 安装java
+   - 安装hadoop
    
    ```
 #添加hadoop用户
