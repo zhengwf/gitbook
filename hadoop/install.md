@@ -122,4 +122,6 @@ jdk： 1.7.0_55
  参考单机安装
  #### 修改配置文件
  
+ 修改配置文件: $HADOOP_HOME/etc/hadoop/core-site.xml ,添加配置
+ 
  
