@@ -268,6 +268,8 @@ hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dpro
 #### 配置yarn
 
 * 修改配置文件$HADOOP\_HOME/etc/hadoop/mapred-site.xml
-* 
+* 修改配置文件$HADOOP\_HOME/etc/hadoop/yarn-site.xml
+  * 
+
 
 
