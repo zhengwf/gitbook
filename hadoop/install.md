@@ -69,3 +69,4 @@ The key's randomart image is:
 [hadoop@hadoop001 ~]$ chmod 600 ~/.ssh/authorized_keys 
    ```
    #### 安装java 
+   
