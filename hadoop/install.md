@@ -133,5 +133,10 @@ jdk： 1.7.0_55
  ```
  修改配置文件: $HADOOP_HOME/etc/hadoop/hdfs-site.xml ,添加配置
  ```
- 
+ <configuration>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+</configuration>
  ```
