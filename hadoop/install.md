@@ -79,4 +79,5 @@ The key's randomart image is:
    PATH=$PATH:$JAVA_HOME/bin
    #执行重新加载环境变量 
    source /etc/profile
-   ```   
+   ```  
+   #### 安装hadoop 
