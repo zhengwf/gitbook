@@ -265,7 +265,9 @@ hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dpro
 2017-02-23 16:51:44,419 INFO org.apache.hadoop.http.HttpServer2: addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
 ```
 
-####   配置yarn
+#### 配置yarn
 
+* 修改配置文件$HADOOP\_HOME/etc/hadoop/mapred-site.xml
+* 
 
 
