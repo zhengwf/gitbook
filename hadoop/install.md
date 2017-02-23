@@ -217,4 +217,11 @@ Formatting using clusterid: CID-509edbef-226f-4a5b-a86d-d4ce6d4e6a7e
 SHUTDOWN_MSG: Shutting down NameNode at hadoop001/172.16.31.206
 ************************************************************/
 # 启动hdfs
+[hadoop@hadoop001 hadoop]$ ./sbin/start-dfs.sh 
+17/02/23 16:50:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: Error: JAVA_HOME is not set and could not be found.
+localhost: Error: JAVA_HOME is not set and could not be found.
+#错误原因： 忘记配置 $HADOOP_HOME/etc/hadoop/hadoop-env.sh文件中JAVA_HOME
+
 ```
