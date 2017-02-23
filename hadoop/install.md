@@ -76,4 +76,5 @@ The key's randomart image is:
    [hadoop@hadoop001 ~]$ mv jdk /opt/beh/core/
    #配置环境变量
    
+   
    ```   
