@@ -82,5 +82,7 @@ The key's randomart image is:
    ```  
    #### 安装hadoop 
    ```
-    # 配置环境变量   
+    # 配置环境变量
+    export HADOOP_HOME=/opt/beh/core/hadoop
+    PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin   
    ```
