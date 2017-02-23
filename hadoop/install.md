@@ -224,5 +224,12 @@ localhost: Error: JAVA_HOME is not set and could not be found.
 localhost: Error: JAVA_HOME is not set and could not be found.
 #错误原因： 忘记配置 $HADOOP_HOME/etc/hadoop/hadoop-env.sh文件中JAVA_HOME
 # hadoop启动
-
+[hadoop@hadoop001 hadoop]$ start-dfs.sh 
+17/02/23 16:57:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /opt/beh/core/hadoop/logs/hadoop-hadoop-namenode-hadoop001.out
+localhost: starting datanode, logging to /opt/beh/core/hadoop/logs/hadoop-hadoop-datanode-hadoop001.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /opt/beh/core/hadoop/logs/hadoop-hadoop-secondarynamenode-hadoop001.out
+17/02/23 16:57:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ```
