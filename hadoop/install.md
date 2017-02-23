@@ -250,7 +250,7 @@ Starting secondary namenodes [0.0.0.0]
 hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dproc_namenode -Xmx1000m -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/opt/beh/core/hadoop/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/opt/beh/core/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,console -Djava.library.path=/opt/beh/core/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/opt/beh/core/hadoop/logs -Dhadoop.log.file=hadoop-hadoop-namenode-hadoop001.log -Dhadoop.home.dir=/opt/beh/core/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,RFA -Djava.library.path=/opt/beh/core/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.namenode.NameNode
 ```
 
-通过ps 查看启动namenode时使用到的一些命令行参数，通过日志可以看到默认的web访问地址，但是如果远程连接好像访问不到
+通过ps 查看启动namenode时使用到的一些命令行参数，通过日志可以看到默认的web访问地址，但是如果远程连接好像访问不到，**原因没有关闭防火墙**
 
 ```
 2017-02-23 16:51:44,297 INFO org.apache.hadoop.hdfs.DFSUtil: Starting Web-server for hdfs at: http://0.0.0.0:50070
@@ -265,9 +265,7 @@ hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dpro
 2017-02-23 16:51:44,419 INFO org.apache.hadoop.http.HttpServer2: addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
 ```
 
-#### 配置yarn 
-
-
+#### 配置yarn
 
 
 
