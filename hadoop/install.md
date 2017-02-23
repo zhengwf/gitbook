@@ -89,6 +89,6 @@ The key's randomart image is:
     source /etc/profile
     # 执行hadoop命令  
     [hadoop@hadoop001 ~]$ hadoop fs -ls /
-    # 能查看到本地文件系统 
+    # 能查看到本地文件系统 ，执行wordcount
      [hadoop@hadoop001 ~]$ hadoop jar /opt/beh/core/hadoop/share/hadoop/mapreduce2/hadoop-mapreduce-examples-2.6.0-cdh5.7.5.jar wordcount /home/hadoop/NOTICE.txt /home/hadoop/output   
    ```
