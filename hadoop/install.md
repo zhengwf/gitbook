@@ -72,5 +72,6 @@ The key's randomart image is:
    ```
    #解压tar包
    [hadoop@hadoop001 ~]$ tar -zvxf jdk-7u55-linux-x64.tar.gz 
+   [hadoop@hadoop001 ~]$ mv jdk1.7.0_55/ jdk
    
    ```   
