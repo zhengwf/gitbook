@@ -245,3 +245,10 @@ Starting secondary namenodes [0.0.0.0]
 
 到这里hadoop的hdfs功能基本能用了从上边的日志可以看出，格式化时hadoop的一些配置信息。默认启动的服务有：namenode，datanode，和secondary namenode
 
+```
+[hadoop@hadoop001 hadoop]$ ps -ef |grep namenode
+hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dproc_namenode -Xmx1000m -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/opt/beh/core/hadoop/logs -Dhadoop.log.file=hadoop.log -Dhadoop.home.dir=/opt/beh/core/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,console -Djava.library.path=/opt/beh/core/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Stack=true -Dhadoop.log.dir=/opt/beh/core/hadoop/logs -Dhadoop.log.file=hadoop-hadoop-namenode-hadoop001.log -Dhadoop.home.dir=/opt/beh/core/hadoop -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,RFA -Djava.library.path=/opt/beh/core/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS -Dhdfs.audit.logger=INFO,NullAppender -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.namenode.NameNode
+```
+
+通过ps 查看启动namenode时使用到的一些命令行参数
+
