@@ -223,5 +223,6 @@ Starting namenodes on [localhost]
 localhost: Error: JAVA_HOME is not set and could not be found.
 localhost: Error: JAVA_HOME is not set and could not be found.
 #错误原因： 忘记配置 $HADOOP_HOME/etc/hadoop/hadoop-env.sh文件中JAVA_HOME
+# hadoop启动
 
 ```
