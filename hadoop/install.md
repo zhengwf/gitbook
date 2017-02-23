@@ -30,7 +30,7 @@
    
   #### 创建hadoop用户，并做免密 
   
-   ```
+```
 #添加hadoop用户
 [root@hadoop001 ~]# useradd hadoop 
 [root@hadoop001 ~]# passwd hadoop
@@ -67,6 +67,7 @@ The key's randomart image is:
 [hadoop@hadoop001 ~]$ cat .ssh/id_rsa.pub >> .ssh/authorized_keys
 [hadoop@hadoop001 ~]$ chmod 700 ~/.ssh/
 [hadoop@hadoop001 ~]$ chmod 600 ~/.ssh/authorized_keys 
-   ```
+```
    #### 安装java 
-   
+```
+```   
