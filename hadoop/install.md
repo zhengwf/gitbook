@@ -75,6 +75,7 @@ The key's randomart image is:
    [hadoop@hadoop001 ~]$ mv jdk1.7.0_55/ jdk
    [hadoop@hadoop001 ~]$ mv jdk /opt/beh/core/
    #配置环境变量，在/etc/profile中添加
-   
+   export JAVA_HOME=/opt/beh/core/jdk
+   PATH=$PATH:$JAVA_HOME/bin
    
    ```   
