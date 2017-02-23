@@ -6,7 +6,7 @@
 
     操作系统： centos6.5  
     hadoop ： hadoop-2.6.0-cdh5.7.5  
-    jdk： 1.8
+    jdk： 1.7.0_55
 
 # 搭建模式
     1. 单机模式
