@@ -84,5 +84,8 @@ The key's randomart image is:
    ```
     # 配置环境变量
     export HADOOP_HOME=/opt/beh/core/hadoop
-    PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin   
+    PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin
+    # 执行加载环境变量命令
+    source /etc/profile
+       
    ```
