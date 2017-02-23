@@ -24,8 +24,9 @@
     5. 启动服务
 # 单机模式
    
+   
    ```
- #添加hadoop用户
+# 添加hadoop用户
 [root@hadoop001 ~]# useradd hadoop 
 [root@hadoop001 ~]# passwd hadoop
 更改用户 hadoop 的密码 。
@@ -62,3 +63,4 @@ The key's randomart image is:
 [hadoop@hadoop001 ~]$ chmod 700 ~/.ssh/
 [hadoop@hadoop001 ~]$ chmod 600 ~/.ssh/authorized_keys 
    ```
+   # 
