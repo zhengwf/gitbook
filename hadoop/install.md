@@ -283,6 +283,7 @@ hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dpro
           <value>mapreduce_shuffle</value>
       </property>
   ```
+#### 启动yarn ，访问8088 端口
 
 
 
