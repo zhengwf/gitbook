@@ -77,5 +77,6 @@ The key's randomart image is:
    #配置环境变量，在/etc/profile中添加
    export JAVA_HOME=/opt/beh/core/jdk
    PATH=$PATH:$JAVA_HOME/bin
-   #执行重新加载环境变量
+   #执行重新加载环境变量 
+   source /etc/profile
    ```   
