@@ -82,4 +82,5 @@ The key's randomart image is:
    ```  
    #### 安装hadoop 
    ```
+    # 配置环境变量   
    ```
