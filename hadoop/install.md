@@ -27,6 +27,7 @@
    - 创建hadoop用户，对hadoop用户做本地免密
    - 安装java
    - 安装hadoop
+   
   #### 创建hadoop用户，并做免密 
    ```
 #添加hadoop用户
