@@ -23,4 +23,16 @@
     4. 格式化zk，namenode  
     5. 启动服务
 # 单机模式
-    
+   
+   ```
+ #添加hadoop用户
+[root@hadoop001 ~]# useradd hadoop 
+[root@hadoop001 ~]# passwd hadoop
+更改用户 hadoop 的密码 。
+新的 密码：
+无效的密码： 它基于字典单词
+无效的密码： 过于简单
+重新输入新的 密码：
+passwd： 所有的身份验证令牌已经成功更新。
+[root@hadoop001 ~]# su - hadoop 
+   ```
