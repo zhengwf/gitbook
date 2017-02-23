@@ -140,4 +140,4 @@ jdk： 1.7.0_55
     </property>
 </configuration>
  ```
-#### 格式化配置文件
+#### 格式化hdfs，启动hdfs
