@@ -141,3 +141,6 @@ jdk： 1.7.0_55
 </configuration>
  ```
 #### 格式化hdfs，启动hdfs
+```
+
+```
