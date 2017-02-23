@@ -15,6 +15,7 @@
     4. ha 模式
     5. faderation 模式
     6. faderation + viewfs 模式
+    
 # 搭建大致步骤
     1. 环境准备（免密，主机列表，关闭防火墙，句柄修改等）    
     2. 安装jdk  
