@@ -110,5 +110,5 @@ jdk： 1.7.0_55
      [hadoop@hadoop001 ~]$ hadoop jar /opt/beh/core/hadoop/share/hadoop/mapreduce2/hadoop-mapreduce-examples-2.6.0-cdh5.7.5.jar wordcount /home/hadoop/NOTICE.txt /home/hadoop/output   
 ```
 
-
+到这里hadoop单机安装完成，单机版默认使用本地的文件系统
 
