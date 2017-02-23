@@ -113,34 +113,43 @@ jdk： 1.7.0_55
 到这里hadoop单机安装完成，单机版默认使用本地的文件系统
 
 # 伪分布式安装
- ### 安装步骤
- - ssh本地免密，修改host列表
- - 修改配置
- - 格式化hdfs，启动
- - 配置yarn，启动yarn
- #### ssh免密，和修改主机列表
- 参考单机安装
- #### 修改配置文件
- 
- 修改配置文件: $HADOOP_HOME/etc/hadoop/core-site.xml ,添加配置
- ```
- <configuration>
-    <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://localhost:9000</value>
-    </property>
-</configuration>
- ```
- 修改配置文件: $HADOOP_HOME/etc/hadoop/hdfs-site.xml ,添加配置
- ```
- <configuration>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-</configuration>
- ```
-#### 格式化hdfs，启动hdfs
+
+### 安装步骤
+
+* ssh本地免密，修改host列表
+* 修改配置
+* 格式化hdfs，启动
+* 配置yarn，启动yarn
+
+  #### ssh免密，和修改主机列表
+
+  参考单机安装
+
+  #### 修改配置文件
+
+  修改配置文件: $HADOOP\_HOME/etc/hadoop/core-site.xml ,添加配置
+
+  ```
+  <configuration>
+   <property>
+       <name>fs.defaultFS</name>
+       <value>hdfs://localhost:9000</value>
+   </property>
+  </configuration>
+  ```
+
+  修改配置文件: $HADOOP\_HOME/etc/hadoop/hdfs-site.xml ,添加配置
+
+  ```
+  <configuration>
+   <property>
+       <name>dfs.replication</name>
+       <value>1</value>
+   </property>
+  </configuration>
+  ```
+
+  #### 格式化hdfs，启动hdfs
 
 ```
 #格式化namenode
@@ -233,3 +242,6 @@ Starting secondary namenodes [0.0.0.0]
 0.0.0.0: starting secondarynamenode, logging to /opt/beh/core/hadoop/logs/hadoop-hadoop-secondarynamenode-hadoop001.out
 17/02/23 16:57:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ```
+
+到这里hadoop的hdfs功能基本能用了从上边的日志可以看出，格式化时hadoop的一些配置信息。默认启动的服务有：namenode，datanode，和secondary namenode
+
