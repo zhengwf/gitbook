@@ -39,7 +39,7 @@ jdk： 1.7.0_55
    * 安装java
    * 安装hadoop
 
-   #### 创建hadoop用户，并做免密 ，修改host列表
+   #### 创建hadoop用户，并做免密 ，修改host列表{#ssh免密}
 
    ```
    #添加hadoop用户
