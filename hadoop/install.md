@@ -35,4 +35,28 @@
 重新输入新的 密码：
 passwd： 所有的身份验证令牌已经成功更新。
 [root@hadoop001 ~]# su - hadoop 
+#ssh 本地免密
+[hadoop@hadoop001 ~]$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/hadoop/.ssh/id_rsa):       
+Created directory '/home/hadoop/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/hadoop/.ssh/id_rsa.
+Your public key has been saved in /home/hadoop/.ssh/id_rsa.pub.
+The key fingerprint is:
+cd:13:42:32:94:7c:35:ec:5c:27:ef:ad:01:e9:ee:21 hadoop@hadoop001
+The key's randomart image is:
++--[ RSA 2048]----+
+|     o+..oo      |
+|      o+. ..o .  |
+|       ..o.. =   |
+|         +o.o .  |
+|        S +. o . |
+|           .. o .|
+|          E..  o |
+|           ....  |
+|           ..    |
++-----------------+
+[hadoop@hadoop001 ~]$ cat .ssh/id_rsa.pub >> .ssh/authorized_keys
    ```
