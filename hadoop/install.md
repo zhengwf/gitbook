@@ -67,9 +67,11 @@ The key's randomart image is:
 [hadoop@hadoop001 ~]$ cat .ssh/id_rsa.pub >> .ssh/authorized_keys
 [hadoop@hadoop001 ~]$ chmod 700 ~/.ssh/
 [hadoop@hadoop001 ~]$ chmod 600 ~/.ssh/authorized_keys 
-# 添加host列表
 
   ```
+  添加主机列表 编辑/etc/host ，添加本机ip 和主机名对应关系
+
+
    #### 安装java 
    ```
    #解压tar包
