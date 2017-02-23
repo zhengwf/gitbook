@@ -28,7 +28,7 @@
    - 安装java
    - 安装hadoop
    
-  #### 创建hadoop用户，并做免密 
+  #### 创建hadoop用户，并做免密 ，修改host列表
   
    ```
 #添加hadoop用户
