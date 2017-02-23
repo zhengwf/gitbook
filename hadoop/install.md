@@ -87,5 +87,5 @@ The key's randomart image is:
     PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin
     # 执行加载环境变量命令
     source /etc/profile
-       
+    # 执行hadoop命令       
    ```
