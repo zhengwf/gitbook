@@ -26,7 +26,7 @@
    
    
    ```
-# 添加hadoop用户
+#添加hadoop用户
 [root@hadoop001 ~]# useradd hadoop 
 [root@hadoop001 ~]# passwd hadoop
 更改用户 hadoop 的密码 。
