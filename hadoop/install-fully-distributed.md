@@ -2,4 +2,12 @@
 查看单机安装部分
 #环境准备
 #### 修改主机列表
-
+```
+[root@hadoop001 ~]# cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.16.31.206	hadoop001
+172.16.31.207	hadoop002
+172.16.31.208	hadoop003
+```
+#### 修改句柄
