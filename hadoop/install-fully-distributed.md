@@ -70,3 +70,5 @@ datanode|hdfs-site.xml|dfs.datanode.data.dir|/opt/beh/data/hadoop/datanode|datan
 启动datanode： hadoop-deamons.sh start datanode
 
 
+
+
