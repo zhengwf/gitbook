@@ -72,5 +72,5 @@ datanode|hdfs-site.xml|dfs.datanode.data.dir|/opt/beh/data/hadoop/datanode|datan
 # 配置yarn
 
 # 启动yarn
-
+[hdfs-site.xml](/assets/install/hdfs-site.xml "hdfs-site.xml")
 
