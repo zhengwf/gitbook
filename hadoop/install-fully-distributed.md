@@ -19,10 +19,10 @@ hadoop		soft	nofile	10000
 hadoop		hard	nofile	10000
 
 ```
-在/etc/security/limits.conf中添加
+在/etc/security/limits.d/90-nproc.conf 中添加
 ```
-hadoop		soft	nofile	10000
-hadoop		hard	nofile	10000
+hadoop     soft    nproc     unlimited
+hadoop     hard    nproc     unlimited
 ```
 #### 关闭防火墙
 永久关闭，需要重启命令： chkconfig iptables off
