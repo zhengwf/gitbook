@@ -57,6 +57,7 @@ PubkeyAuthentication yes     # 启用公钥认证，默认为yes
 --|--|--|--|--
 整体|core-site.xml|fs.defaultFS|hdfs://hadoop001:9000|hdfs访问url
 整体|core-site.xml|io.file.buffer.size	|131072|设置读写SequenceFiles文件是bufferd大小
+namenode|hdfs-site.xml|	dfs.namenode.name.dir|/opt/beh/data/hadoop/namenode|设置namenode存储namespace和 transactions logs 的本地存储目录。如果是以逗号分隔的一组路径，就会保存namenode数据多个副本
 
 
 
