@@ -25,5 +25,6 @@ hadoop		soft	nofile	10000
 hadoop		hard	nofile	10000
 ```
 #### 关闭防火墙
-
+永久关闭，需要重启命令： chkconfig iptables off
+临时关闭，重启后无效： service iptables stop
 
