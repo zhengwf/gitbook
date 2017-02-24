@@ -11,3 +11,16 @@
 172.16.31.208	hadoop003
 ```
 #### 修改句柄
+在/etc/secuity/limited.conf中添加
+```
+hadoop		soft	nofile	10000
+hadoop		hard	nofile	10000
+
+```
+在/etc/security/limits.conf中添加
+```
+hadoop		soft	nofile	10000
+hadoop		hard	nofile	10000
+```
+
+
