@@ -30,5 +30,5 @@ hadoop		hard	nofile	10000
 临时关闭selinux命令：setenforce 0
 永久关闭selinux配置： 修改/etc/selinux/config文件，将SELINUX=enforcing改为SELINUX=disabled
 查看防火墙状态命令： service iptables status
-查看selinux状态命令：
+查看selinux状态命令：getenforce 或 sestatus -v
 
