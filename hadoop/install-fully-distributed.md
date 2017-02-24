@@ -10,6 +10,8 @@
 172.16.31.207	hadoop002
 172.16.31.208	hadoop003
 ```
+#### 修改主机名
+编辑/etc/sysconfig/network文件，设置主机名
 #### 修改句柄
 在/etc/secuity/limited.conf中添加
 ```
