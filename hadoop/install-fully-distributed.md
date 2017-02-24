@@ -34,5 +34,7 @@ hadoop     hard    nproc     unlimited
 
 #### 在其他节点上重复以上操作，或者同步配置
 #### 创建hadoop用户，并且对hadoop做免密
+创建用户命令：useradd -m hadoop -p hadoop
+切换用户到hadoop ： su - hadoop
 
 
