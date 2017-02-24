@@ -51,6 +51,7 @@ chmod 600 .ssh/authorized_keys
 RSAAuthentication yes        # 启用 RSA 认证，默认为yes
 PubkeyAuthentication yes     # 启用公钥认证，默认为yes
 ```
-#配置hadoop文件
+# 配置hadoop文件
+
 
 
