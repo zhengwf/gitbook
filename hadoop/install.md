@@ -269,30 +269,30 @@ hadoop    9895     1  1 16:57 ?        00:00:08 /opt/beh/core/jdk/bin/java -Dpro
 
 * 修改配置文件$HADOOP\_HOME/etc/hadoop/mapred-site.xml，添加配置
 
- ```
-<property>
+  ```
+  <property>
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
-</property>
-```
+  </property>
+  ```
 
 * 修改配置文件$HADOOP\_HOME/etc/hadoop/yarn-site.xml
+
   ```
       <property>
           <name>yarn.nodemanager.aux-services</name>
           <value>mapreduce_shuffle</value>
       </property>
   ```
-#### 启动yarn ，访问8088 端口
 
+  #### 启动yarn ，访问8088 端口
 
-  ```
+```
 [hadoop@hadoop001 hadoop]$ start-yarn.sh 
 starting yarn daemons
 starting resourcemanager, logging to /opt/beh/core/hadoop/logs/yarn-hadoop-resourcemanager-hadoop001.out
 localhost: starting nodemanager, logging to /opt/beh/core/hadoop/logs/yarn-hadoop-nodemanager-hadoop001.out
 ```
-
 
 
 
