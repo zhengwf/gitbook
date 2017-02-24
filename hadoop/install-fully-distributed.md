@@ -44,7 +44,7 @@ chmod -R 700 .ssh/
 chmod 600 .ssh/authorized_keys
 ```
 测试本地免密可用：ssh localhost
-配置其他机器对本机免密：把其他机器上的id_rsa.pub文件复制到hadoop001上，追加到hadoop001上的authorized_keys文件中。然后分发hadoop001的authorized_keys文件
+配置其他机器对本机免密：把其他机器上的id_rsa.pub文件复制到hadoop001上，追加到hadoop001上的authorized_keys文件中。然后分发hadoop001的authorized_keys文件   
 常见问题：~/.ssh文件夹，和~/.ssh/authorized_keys文件权限，如果还有问题检查
 一下服务器的ssh配置文件/etc/ssh/sshd_config
 ```
