@@ -69,6 +69,8 @@ datanode|hdfs-site.xml|dfs.datanode.data.dir|/opt/beh/data/hadoop/datanode|datan
 启动namenode： hadoop-deamon.sh start namenode
 启动datanode： hadoop-deamons.sh start datanode
 
+# 配置yarn
 
+# 启动yarn
 
 
