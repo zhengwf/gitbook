@@ -62,6 +62,8 @@ namenode|hdfs-site.xml|dfs.blocksize|268435456|hdfs block块大小（256M）
 namenode|hdfs-site.xml|dfs.namenode.handler.count|100|namenode 线程持有datanode链接的rpc数
 datanode|hdfs-site.xml|dfs.datanode.data.dir|/opt/beh/data/hadoop/datanode|datanode存储数据位置，可以是以逗号分隔的多个路径
 
+##### 配置slave文件
+添加要启动datanode的主机名
 # 格式化namenode，启动hdfs
 格式化namenode ： hdfs namenode -format
 启动namenode： hadoop-deamon.sh start namenode
