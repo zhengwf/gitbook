@@ -53,5 +53,10 @@ PubkeyAuthentication yes     # 启用公钥认证，默认为yes
 ```
 # 配置hadoop文件
 
+服务|文件|配置项|值|说明
+--|--|--|--|--
+整体|core-site.xml|fs.defaultFS|hdfs://hadoop001:9000|hdfs访问url
+整体|core-site.xml|io.file.buffer.size	|131072|设置读写SequenceFiles文件是bufferd大小
+
 
 
