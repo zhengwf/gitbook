@@ -135,26 +135,26 @@ hdfs-site.xml
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-	<property>
-		<name>dfs.replication</name>
-		<value>1</value>
-	</property>
-	<property>
-		<name>dfs.namenode.name.dir</name>
-		<value>/opt/beh/data/hadoop/namenode</value>
-	</property>
-	<property>
-		<name>dfs.blocksize</name>
-		<value>268435456</value>
-	</property>
-	<property>
-		<name>dfs.namenode.handler.count</name>
-		<value>100</value>
-	</property>
-	<property>
-		<name>dfs.datanode.data.dir</name>
-		<value>/opt/beh/data/hadoop/datanode</value>
-	</property>
+    <property>
+        <name>dfs.replication</name>
+        <value>1</value>
+    </property>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/opt/beh/data/hadoop/namenode</value>
+    </property>
+    <property>
+        <name>dfs.blocksize</name>
+        <value>268435456</value>
+    </property>
+    <property>
+        <name>dfs.namenode.handler.count</name>
+        <value>100</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/opt/beh/data/hadoop/datanode</value>
+    </property>
 </configuration>
 ```
 
