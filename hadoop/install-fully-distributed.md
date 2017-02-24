@@ -80,7 +80,83 @@ PubkeyAuthentication yes     # 启用公钥认证，默认为yes
 | namenode | hdfs-site.xml | dfs.namenode.handler.count | 100 | namenode 线程持有datanode链接的rpc数 |
 | datanode | hdfs-site.xml | dfs.datanode.data.dir | /opt/beh/data/hadoop/datanode | datanode存储数据位置，可以是以逗号分隔的多个路径 |
 
-##### 
+core-site.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://hadoop001:9000</value>
+    </property>
+    <property>
+            <name>io.file.buffer.size</name>
+        <value>131072</value>
+    </property>
+</configuration>
+```
+
+hdfs-site.xml
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>/opt/beh/data/hadoop/namenode</value>
+	</property>
+	<property>
+		<name>dfs.blocksize</name>
+		<value>268435456</value>
+	</property>
+	<property>
+		<name>dfs.namenode.handler.count</name>
+		<value>100</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>/opt/beh/data/hadoop/datanode</value>
+	</property>
+</configuration>
+```
 
 ##### 配置slave文件
 
