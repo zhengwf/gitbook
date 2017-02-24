@@ -27,4 +27,8 @@ hadoop		hard	nofile	10000
 #### 关闭防火墙
 永久关闭，需要重启命令： chkconfig iptables off
 临时关闭，重启后无效： service iptables stop
+临时关闭selinux命令：setenforce 0
+永久关闭selinux配置： 修改/etc/selinux/config文件，将SELINUX=enforcing改为SELINUX=disabled
+查看防火墙状态命令： service iptables status
+查看selinux状态命令：
 
