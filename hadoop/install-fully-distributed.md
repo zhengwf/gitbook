@@ -37,5 +37,6 @@ hadoop     hard    nproc     unlimited
 创建用户命令：useradd -m hadoop -p hadoop
 切换用户到hadoop ： su - hadoop
 生成本地公私钥：ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
-对本地免密：
+对本地免密： cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
 
