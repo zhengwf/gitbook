@@ -24,5 +24,6 @@ hadoop		hard	nofile	10000
 hadoop		soft	nofile	10000
 hadoop		hard	nofile	10000
 ```
+#### 关闭防火墙
 
 
