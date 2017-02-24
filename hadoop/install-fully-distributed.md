@@ -174,6 +174,7 @@ hdfs-site.xml
 | :--- | :--- | :--- | :--- | :--- |
 | resourcemanager | yarn-site.xml | yarn.resourcemanager.hostname	 | hadoop001 | 设置yarn.resourcemanager*address的默认主机名，端口使用默认端口，包含对yarn.resourcemanager.address，yarn.resourcemanager.scheduler.address	，yarn.resourcemanager.resource-tracker.address	，yarn.resourcemanager.admin.address，yarn.resourcemanager.webapp.address配置项起作用 |
 | resourcemanager | yarn-site.xml |yarn.resourcemanager.webapp.address	  | hadoop001:23188 |设置yarn web访问地址  |
+|resourcemanager | yarn-site.xml| yarn.resourcemanager.scheduler.class| org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler | 设置队列调度器，总共有三种：fifo，fair，和capacity 这里在使用capacity |
 
 
 # 启动yarn
