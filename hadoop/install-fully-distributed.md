@@ -38,10 +38,12 @@ hadoop     hard    nproc     unlimited
 切换用户到hadoop ： su - hadoop
 生成本地公私钥：ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 对本地免密:
-``` 
- cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
- chmod -R 700 .ssh/
- chmod 600 .ssh/authorized_keys 
+
+
+```
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod -R 700 .ssh/
+chmod 600 .ssh/authorized_keys
 ```
 测试本地免密可用：ssh localhost
  
