@@ -47,3 +47,4 @@ chmod 600 .ssh/authorized_keys
 配置其他机器对本机免密：把其他机器上的id_rsa.pub文件复制到hadoop001上，追加到hadoop001上的authorized_keys文件中。然后分发hadoop001的authorized_keys文件
 
 
+
