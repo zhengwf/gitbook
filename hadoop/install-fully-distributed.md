@@ -44,5 +44,5 @@ chmod -R 700 .ssh/
 chmod 600 .ssh/authorized_keys
 ```
 测试本地免密可用：ssh localhost
- 
+
 
