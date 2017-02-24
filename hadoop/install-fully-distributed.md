@@ -32,3 +32,5 @@ hadoop		hard	nofile	10000
 查看防火墙状态命令： service iptables status
 查看selinux状态命令：getenforce 或 sestatus -v
 
+#### 在其他节点上重复以上操作，或者同步配置
+
