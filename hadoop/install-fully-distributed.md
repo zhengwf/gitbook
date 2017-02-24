@@ -170,6 +170,8 @@ hdfs-site.xml
 
 # 配置yarn
 
+
+
 # 启动yarn
 
 
