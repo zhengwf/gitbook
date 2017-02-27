@@ -189,3 +189,13 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 ```
 hadoop-daemon.sh start journalnode
 ```
+##### 3.格式化namenode，启动
+在hadoop001上
+```
+hdfs namenode -format
+hadoop-daemon.sh start namenode
+```
+在hadoop002上
+```
+
+```
