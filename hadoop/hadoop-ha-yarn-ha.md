@@ -207,3 +207,86 @@ hadoop-daemon.sh start zkfc
 hadoop-daemons.sh start datanode
 ```
 # yarn 配置
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Licensed under the Apache License, Version 2.0 (the "License"); you
+	may not use this file except in compliance with the License. You may obtain
+	a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless
+	required by applicable law or agreed to in writing, software distributed
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+	the specific language governing permissions and limitations under the License.
+	See accompanying LICENSE file. -->
+<configuration>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+   <name>yarn.resourcemanager.ha.enabled</name>
+   <value>true</value>
+ </property>
+ <property>
+   <name>yarn.resourcemanager.cluster-id</name>
+   <value>beh</value>
+ </property>
+ <property>
+   <name>yarn.resourcemanager.ha.rm-ids</name>
+   <value>rm1,rm2</value>
+ </property>
+ <property>
+   <name>yarn.resourcemanager.hostname.rm1</name>
+   <value>hadoop001</value>
+ </property>
+ <property>
+   <name>yarn.resourcemanager.hostname.rm2</name>
+   <value>hadoop002</value>
+ </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.address.rm1</name>
+    <value>hadoop001:23188</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.address.rm2</name>
+    <value>hadoop002:23188</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.zk-address</name>
+    <value>hadoop001:2181,hadoop002:2181,hadoop003:2181</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>1024</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+  </property>
+  <property>
+	   <name>yarn.resourcemanager.scheduler.class</name>
+	    <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>4096</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.vmem-pmem-ratio</name>
+    <value>2.1</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.local-dirs</name>
+    <value>/opt/beh/data/nodemanager</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.log-dirs</name>
+    <value>/opt/beh/log/yarn</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+</configuration>
+
+```
