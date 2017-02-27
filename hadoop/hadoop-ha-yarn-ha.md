@@ -151,4 +151,5 @@ limitations under the License. See accompanying LICENSE file.
 |dfs.ha.automatic-failover.enabled|true | 设置自动切换namenode
 #### 3.配置zookeeper
 ##### 1.下载安装包，并解压，放在/opt/beh/core/zookeeper
-##### 2.配置zookeeper
+##### 2.配置zookeeper- zoo.cfg
+
