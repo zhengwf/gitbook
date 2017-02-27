@@ -177,7 +177,9 @@ hdfs-site.xml
 |resourcemanager | yarn-site.xml| yarn.resourcemanager.scheduler.class| org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler | 设置队列调度器，总共有三种：fifo，fair，和capacity 这里在使用capacity |
 | resourcemanager | yarn-site.xml | yarn.scheduler.minimum-allocation-mb	|2048 | 设置每个container申请的最小内存 单位：MB|
 | resourcemanager | yarn-site.xml | yarn.scheduler.maximum-allocation-mb| 4096| 设置每个container申请的最大内存 单位：MB |
-|nodemanager| yarn-site.xml| yarn.nodemanager.resource.memory-mb | 4096 | 定义yarn能使用的物理内存	
+|nodemanager| yarn-site.xml| yarn.nodemanager.resource.memory-mb | 4096 | 定义yarn能使用的物理内存，默认使用机器的全部可用资源|
+|nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
+	
 
 # 启动yarn
 
