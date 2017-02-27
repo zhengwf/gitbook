@@ -143,5 +143,5 @@ limitations under the License. See accompanying LICENSE file.
 |dfs.namenode.rpc-address.[nameservice ID].[name node ID]|hadoop001:8020|namenode监听的rpc地址|
 |dfs.namenode.shared.edits.dir |qjournal://hadoop001:8485;hadoop002:8485;hadoop003:8485/beh|namenode共享数据的存储位置，这里配置的是journalnode 中共享|
 |dfs.client.failover.proxy.provider.[nameservice ID]|org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider|配置hdfs客户端判断哪个namenode active|
-|dfs.ha.fencing.methods |sshfence|配置隔离失败的namenode的方法：sshfence-ssh方式到失败的namenode，kill掉进程。shell-执行脚本来隔离namenode
+|dfs.ha.fencing.methods |sshfence|配置隔离失败的namenode的方法：sshfence-ssh方式到失败的namenode，kill掉进程。shell-执行脚本来隔离namenode|
 
