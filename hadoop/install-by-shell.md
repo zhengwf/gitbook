@@ -24,4 +24,4 @@
 - 修改句柄，防火墙，selinux ，host，创建用户
 - hadoop 安装脚本 包含调度其他脚本。
 # 依赖
-需要提前安装java，zookeeper（ha 模式下需要）
+需要提前安装java，zookeeper（ha 模式下需要），ssh 服务
