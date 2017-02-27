@@ -191,11 +191,11 @@ hdfs-site.xml
 |mapreduce.framework.name	|yarn|设置调度框架为yarn
 |mapreduce.map.memory.mb|	2048	|设置map最多使用的内存
 |mapreduce.map.java.opts	|-Xmx1024M	|map中jvm的堆大小
-|mapreduce.reduce.memory.mb|	3072|	Larger resource limit for reduces.
-|mapreduce.reduce.java.opts|	-Xmx2560M|	Larger heap-size for child jvms of reduces.
-|mapreduce.task.io.sort.mb|	512	|Higher memory-limit while sorting data for efficiency.
-|mapreduce.task.io.sort.factor	|100	|More streams merged at once while sorting files.
-|mapreduce.reduce.shuffle.parallelcopies	|50	|Higher number of parallel copies run by reduces to fetch outputs from very large number of maps.
+|mapreduce.reduce.memory.mb|	3072|reduce 获取的资源大小
+|mapreduce.reduce.java.opts|	-Xmx2560M|reduce中jvm的堆大小
+|mapreduce.task.io.sort.mb|	512	|排序时最大使用内存
+|mapreduce.task.io.sort.factor	|100	|一次marge的文件数
+|mapreduce.reduce.shuffle.parallelcopies	|50	|从map端抽取数据的并发数
 |mapreduce.jobhistory.address	|MapReduce JobHistory Server host:port|	Default port is 10020.
 |mapreduce.jobhistory.webapp.address|	MapReduce JobHistory Server Web UI host:port	|Default port is 19888.
 |mapreduce.jobhistory.intermediate-done-dir	|/mr-history/tmp	|Directory where history files are written by MapReduce jobs.
