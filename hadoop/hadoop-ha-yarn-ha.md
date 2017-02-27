@@ -153,5 +153,12 @@ limitations under the License. See accompanying LICENSE file.
 ##### 1.下载安装包，并解压，放在/opt/beh/core/zookeeper
 ##### 2.配置zookeeper- zoo.cfg
 ```
-
+tickTime=2000  
+dataDir=/opt/beh/data/zookeeper  
+clientPort=2181  
+initLimit=5  
+syncLimit=2  
+server.1=hadoop001:2888:3888  
+server.2=hadoop002:2888:3888  
+server.3=hadoop003:2888:3888 
 ```
