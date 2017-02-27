@@ -178,5 +178,5 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 ##### 6.启动zookeeper
 /opt/beh/data/zookeeper/zkServer.sh start
 
-
+# 启动hdfs
 
