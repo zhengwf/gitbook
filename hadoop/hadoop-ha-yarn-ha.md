@@ -206,3 +206,4 @@ hadoop-daemon.sh start zkfc
 ```
 hadoop-daemons.sh start datanode
 ```
+# yarn 配置
