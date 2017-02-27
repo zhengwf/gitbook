@@ -178,7 +178,7 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 /opt/beh/data/zookeeper/zkServer.sh start
 
 # 启动hdfs
-格式化zk
+##### 1.格式化zk
 ```
 [hadoop@hadoop001 hadoop]$ hdfs zkfc -formatZK
 ```
