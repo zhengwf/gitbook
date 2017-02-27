@@ -9,3 +9,4 @@
 
 # 修改hdfs 配置
 
+#### 1.修改core-site.xml
