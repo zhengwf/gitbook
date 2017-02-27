@@ -292,5 +292,6 @@ hadoop-daemons.sh start datanode
 ```
 # 分发配置文件,启动yarn
 ```
-
+yarn-daemon.sh start resourcemanager
+yarn-daemon.sh start nodemanager
 ```
