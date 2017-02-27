@@ -176,5 +176,5 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 ```
 ##### 5.配置环境变量（非必要，为了使用方便）
 ##### 6.启动zookeeper
-
+/opt/beh/data/zookeeper/zkServer.sh start
 
