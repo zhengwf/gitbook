@@ -186,22 +186,20 @@ hdfs-site.xml
 
 下面是关于mapreduce的配置，mapred-site.xml
 
-| 文件 | key | value | 说明 |
-| :--- | :--- | :--- | :--- |
-|mapreduce.framework.name	|yarn|	Execution framework set to Hadoop YARN.
-mapreduce.map.memory.mb	1536	Larger resource limit for maps.
-mapreduce.map.java.opts	-Xmx1024M	Larger heap-size for child jvms of maps.
-mapreduce.reduce.memory.mb	3072	Larger resource limit for reduces.
-mapreduce.reduce.java.opts	-Xmx2560M	Larger heap-size for child jvms of reduces.
-mapreduce.task.io.sort.mb	512	Higher memory-limit while sorting data for efficiency.
-mapreduce.task.io.sort.factor	100	More streams merged at once while sorting files.
-mapreduce.reduce.shuffle.parallelcopies	50	Higher number of parallel copies run by reduces to fetch outputs from very large number of maps.
-Configurations for MapReduce JobHistory Server:
-Parameter	Value	Notes
-mapreduce.jobhistory.address	MapReduce JobHistory Server host:port	Default port is 10020.
-mapreduce.jobhistory.webapp.address	MapReduce JobHistory Server Web UI host:port	Default port is 19888.
-mapreduce.jobhistory.intermediate-done-dir	/mr-history/tmp	Directory where history files are written by MapReduce jobs.
-mapreduce.jobhistory.done-dir	/mr-history/done	Directory where history files are managed by the MR JobHistory Server.
+| key | value | 说明 |
+| :--- | :--- | :--- |
+|mapreduce.framework.name	|yarn|设置调度框架为yarn
+|mapreduce.map.memory.mb|	2048	|设置map最多使用的内存
+|mapreduce.map.java.opts	|-Xmx1024M	|map中jvm的堆大小
+|mapreduce.reduce.memory.mb|	3072|	Larger resource limit for reduces.
+|mapreduce.reduce.java.opts|	-Xmx2560M|	Larger heap-size for child jvms of reduces.
+|mapreduce.task.io.sort.mb|	512	|Higher memory-limit while sorting data for efficiency.
+|mapreduce.task.io.sort.factor	|100	|More streams merged at once while sorting files.
+|mapreduce.reduce.shuffle.parallelcopies	|50	|Higher number of parallel copies run by reduces to fetch outputs from very large number of maps.
+|mapreduce.jobhistory.address	|MapReduce JobHistory Server host:port|	Default port is 10020.
+|mapreduce.jobhistory.webapp.address|	MapReduce JobHistory Server Web UI host:port	|Default port is 19888.
+|mapreduce.jobhistory.intermediate-done-dir	|/mr-history/tmp	|Directory where history files are written by MapReduce jobs.
+|mapreduce.jobhistory.done-dir	|/mr-history/done|	Directory where history files are managed by the MR JobHistory Server.
 
 	
 
