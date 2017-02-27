@@ -290,3 +290,7 @@ hadoop-daemons.sh start datanode
 </configuration>
 
 ```
+# 分发配置文件,启动yarn
+```
+
+```
