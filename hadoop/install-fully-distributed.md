@@ -259,6 +259,8 @@ hdfs-site.xml
 | mapreduce.jobhistory.webapp.address | hadoop001:19888 | Default port is 19888. |
 | mapreduce.jobhistory.intermediate-done-dir | /opt/beh/data/jobhistory/tmp | Directory where history files are written by MapReduce jobs. |
 | mapreduce.jobhistory.done-dir | /opt/beh/data/jobhistory/done | Directory where history files are managed by the MR JobHistory Server. |
+[mapred-site.xml](assets/install/yarn-site.xml)
+
 
 
 
