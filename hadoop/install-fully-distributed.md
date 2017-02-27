@@ -322,6 +322,8 @@ hdfs-site.xml
 
 ```
 # 启动yarn
+启动resourcemanager: yarn-deamon.sh start resourcemanager
+启动nodemanager: yarn-deamon.sh start nodemanager
 
 
 
