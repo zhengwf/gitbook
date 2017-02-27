@@ -203,3 +203,6 @@ hadoop-daemon.sh start namenode
 hadoop-daemon.sh start zkfc
 ```
 ##### 4.启动datanode
+```
+hadoop-daemons.sh start datanode
+```
