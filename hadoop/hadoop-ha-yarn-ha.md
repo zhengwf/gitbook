@@ -114,6 +114,11 @@ limitations under the License. See accompanying LICENSE file.
     <value>/home/hadoop/.ssh/id_rsa</value>
   </property>
   <property>
+   <name>dfs.ha.automatic-failover.enabled</name>
+   <value>true</value>
+ </property>
+
+  <property>
     <name>dfs.replication</name>
     <value>1</value>
   </property>
