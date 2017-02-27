@@ -152,4 +152,6 @@ limitations under the License. See accompanying LICENSE file.
 #### 3.配置zookeeper
 ##### 1.下载安装包，并解压，放在/opt/beh/core/zookeeper
 ##### 2.配置zookeeper- zoo.cfg
+```
 
+```
