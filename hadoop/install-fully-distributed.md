@@ -180,7 +180,7 @@ hdfs-site.xml
 |nodemanager| yarn-site.xml| yarn.nodemanager.resource.memory-mb | 4096 | 定义yarn能使用的物理内存，默认使用机器的全部可用资源|
 |nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
 |nodemanager|yarn-site.xml|yarn.nodemanager.local-dirs		|/opt/beh/data/yarn/nodemanager|任务执行时临时文件存储位置，多个目录以逗号分隔，多目录可以分担IO压力 |
-|nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
+|nodemanager|yarn-site.xml|yarn.nodemanager.log-dirs		|/opt/beh/log/yarn|nodemanger日志存储位置，多目录分担IO压力 |
 |nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
 |nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
 
