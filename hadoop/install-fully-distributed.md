@@ -196,8 +196,8 @@ hdfs-site.xml
 |mapreduce.task.io.sort.mb|	512	|排序时最大使用内存
 |mapreduce.task.io.sort.factor	|100	|一次marge的文件数
 |mapreduce.reduce.shuffle.parallelcopies	|50	|从map端抽取数据的并发数
-|mapreduce.jobhistory.address	|MapReduce JobHistory Server host:port|	Default port is 10020.
-|mapreduce.jobhistory.webapp.address|	MapReduce JobHistory Server Web UI host:port	|Default port is 19888.
+|mapreduce.jobhistory.address	|hadoop001:10020|	Default port is 10020.
+|mapreduce.jobhistory.webapp.address|hadoop001:19888	|Default port is 19888.
 |mapreduce.jobhistory.intermediate-done-dir	|/mr-history/tmp	|Directory where history files are written by MapReduce jobs.
 |mapreduce.jobhistory.done-dir	|/mr-history/done|	Directory where history files are managed by the MR JobHistory Server.
 
