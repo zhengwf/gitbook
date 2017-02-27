@@ -181,7 +181,7 @@ hdfs-site.xml
 |nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
 |nodemanager|yarn-site.xml|yarn.nodemanager.local-dirs		|/opt/beh/data/yarn/nodemanager|任务执行时临时文件存储位置，多个目录以逗号分隔，多目录可以分担IO压力 |
 |nodemanager|yarn-site.xml|yarn.nodemanager.log-dirs		|/opt/beh/log/yarn|nodemanger日志存储位置，多目录分担IO压力 |
-|nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
+|nodemanager|yarn-site.xml|yarn.nodemanager.log.retain-seconds		|10800|如果日志收集不可用，任务日志在本地存储时间|
 |nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
 
 
