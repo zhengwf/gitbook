@@ -172,36 +172,92 @@ hdfs-site.xml
 
 | 服务 | 文件 | key | value | 说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| resourcemanager | yarn-site.xml | yarn.resourcemanager.hostname	 | hadoop001 | 设置yarn.resourcemanager*address的默认主机名，端口使用默认端口，包含对yarn.resourcemanager.address，yarn.resourcemanager.scheduler.address	，yarn.resourcemanager.resource-tracker.address	，yarn.resourcemanager.admin.address，yarn.resourcemanager.webapp.address配置项起作用 |
-| resourcemanager | yarn-site.xml |yarn.resourcemanager.webapp.address	  | hadoop001:23188 |设置yarn web访问地址  |
-|resourcemanager | yarn-site.xml| yarn.resourcemanager.scheduler.class| org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler | 设置队列调度器，总共有三种：fifo，fair，和capacity 这里在使用capacity |
-| resourcemanager | yarn-site.xml | yarn.scheduler.minimum-allocation-mb	|2048 | 设置每个container申请的最小内存 单位：MB|
-| resourcemanager | yarn-site.xml | yarn.scheduler.maximum-allocation-mb| 4096| 设置每个container申请的最大内存 单位：MB |
-|nodemanager| yarn-site.xml| yarn.nodemanager.resource.memory-mb | 4096 | 定义yarn能使用的物理内存，默认使用机器的全部可用资源|
-|nodemanager|yarn-site.xml|yarn.nodemanager.vmem-pmem-ratio	|2|配置使用虚拟内存的比例，最多使用的虚拟内存=配置项* 任务获取的资源 |
-|nodemanager|yarn-site.xml|yarn.nodemanager.local-dirs		|/opt/beh/data/yarn/nodemanager|任务执行时临时文件存储位置，多个目录以逗号分隔，多目录可以分担IO压力 |
-|nodemanager|yarn-site.xml|yarn.nodemanager.log-dirs		|/opt/beh/log/yarn|nodemanger日志存储位置，多目录分担IO压力 |
-|nodemanager|yarn-site.xml|yarn.nodemanager.log.retain-seconds		|10800|如果日志收集不可用，任务日志在本地存储时间（单位：秒）|
-|nodemanager|yarn-site.xml|yarn.nodemanager.aux-services			|mapreduce_shuffle|Shuffle service that needs to be set for Map Reduce applications. |
+| resourcemanager | yarn-site.xml | yarn.resourcemanager.hostname | hadoop001 | 设置yarn.resourcemanager\*address的默认主机名，端口使用默认端口，包含对yarn.resourcemanager.address，yarn.resourcemanager.scheduler.address    ，yarn.resourcemanager.resource-tracker.address    ，yarn.resourcemanager.admin.address，yarn.resourcemanager.webapp.address配置项起作用 |
+| resourcemanager | yarn-site.xml | yarn.resourcemanager.webapp.address | hadoop001:23188 | 设置yarn web访问地址 |
+| resourcemanager | yarn-site.xml | yarn.resourcemanager.scheduler.class | org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler | 设置队列调度器，总共有三种：fifo，fair，和capacity 这里在使用capacity |
+| resourcemanager | yarn-site.xml | yarn.scheduler.minimum-allocation-mb | 2048 | 设置每个container申请的最小内存 单位：MB |
+| resourcemanager | yarn-site.xml | yarn.scheduler.maximum-allocation-mb | 4096 | 设置每个container申请的最大内存 单位：MB |
+| nodemanager | yarn-site.xml | yarn.nodemanager.resource.memory-mb | 4096 | 定义yarn能使用的物理内存，默认使用机器的全部可用资源 |
+| nodemanager | yarn-site.xml | yarn.nodemanager.vmem-pmem-ratio | 2 | 配置使用虚拟内存的比例，最多使用的虚拟内存=配置项\* 任务获取的资源 |
+| nodemanager | yarn-site.xml | yarn.nodemanager.local-dirs | /opt/beh/data/yarn/nodemanager | 任务执行时临时文件存储位置，多个目录以逗号分隔，多目录可以分担IO压力 |
+| nodemanager | yarn-site.xml | yarn.nodemanager.log-dirs | /opt/beh/log/yarn | nodemanger日志存储位置，多目录分担IO压力 |
+| nodemanager | yarn-site.xml | yarn.nodemanager.log.retain-seconds | 10800 | 如果日志收集不可用，任务日志在本地存储时间（单位：秒） |
+| nodemanager | yarn-site.xml | yarn.nodemanager.aux-services | mapreduce\_shuffle | Shuffle service that needs to be set for Map Reduce applications. |
+```
+<?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Licensed under the Apache License, Version 2.0 (the "License"); you
+	may not use this file except in compliance with the License. You may obtain
+	a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless
+	required by applicable law or agreed to in writing, software distributed
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+	the specific language governing permissions and limitations under the License.
+	See accompanying LICENSE file. -->
+<configuration>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>hadoop001</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.address</name>
+    <value>hadoop001:23188</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.minimum-allocation-mb</name>
+    <value>1024</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.maximum-allocation-mb</name>
+    <value>2048</value>
+  </property>
+  <property>
+	   <name>yarn.resourcemanager.scheduler.class</name>
+	    <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>4096</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.vmem-pmem-ratio</name>
+    <value>2.1</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.local-dirs</name>
+    <value>/opt/beh/data/nodemanager</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.log-dirs</name>
+    <value>/opt/beh/log/yarn</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+  </property>
+</configuration>
+
+```
 下面是关于mapreduce的配置，mapred-site.xml
 
 | key | value | 说明 |
 | :--- | :--- | :--- |
-|mapreduce.framework.name	|yarn|设置调度框架为yarn
-|mapreduce.map.memory.mb|	2048	|设置map最多使用的内存
-|mapreduce.map.java.opts	|-Xmx1024M	|map中jvm的堆大小
-|mapreduce.reduce.memory.mb|	3072|reduce 获取的资源大小
-|mapreduce.reduce.java.opts|	-Xmx2560M|reduce中jvm的堆大小
-|mapreduce.task.io.sort.mb|	512	|排序时最大使用内存
-|mapreduce.task.io.sort.factor	|100	|一次marge的文件数
-|mapreduce.reduce.shuffle.parallelcopies	|50	|从map端抽取数据的并发数
-|mapreduce.jobhistory.address	|hadoop001:10020|	Default port is 10020.
-|mapreduce.jobhistory.webapp.address|hadoop001:19888	|Default port is 19888.
-|mapreduce.jobhistory.intermediate-done-dir	|/opt/beh/data/jobhistory/tmp	|Directory where history files are written by MapReduce jobs.
-|mapreduce.jobhistory.done-dir	|/opt/beh/data/jobhistory/done|	Directory where history files are managed by the MR JobHistory Server.
-
-	
+| mapreduce.framework.name | yarn | 设置调度框架为yarn |
+| mapreduce.map.memory.mb | 2048 | 设置map最多使用的内存 |
+| mapreduce.map.java.opts | -Xmx1024M | map中jvm的堆大小 |
+| mapreduce.reduce.memory.mb | 3072 | reduce 获取的资源大小 |
+| mapreduce.reduce.java.opts | -Xmx2560M | reduce中jvm的堆大小 |
+| mapreduce.task.io.sort.mb | 512 | 排序时最大使用内存 |
+| mapreduce.task.io.sort.factor | 100 | 一次marge的文件数 |
+| mapreduce.reduce.shuffle.parallelcopies | 50 | 从map端抽取数据的并发数 |
+| mapreduce.jobhistory.address | hadoop001:10020 | Default port is 10020. |
+| mapreduce.jobhistory.webapp.address | hadoop001:19888 | Default port is 19888. |
+| mapreduce.jobhistory.intermediate-done-dir | /opt/beh/data/jobhistory/tmp | Directory where history files are written by MapReduce jobs. |
+| mapreduce.jobhistory.done-dir | /opt/beh/data/jobhistory/done | Directory where history files are managed by the MR JobHistory Server. |
 
 # 启动yarn
 
