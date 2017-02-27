@@ -214,7 +214,7 @@ hdfs-site.xml
   </property>
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>2048</value>
+    <value>4096</value>
   </property>
   <property>
        <name>yarn.resourcemanager.scheduler.class</name>
