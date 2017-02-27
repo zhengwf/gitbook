@@ -51,3 +51,4 @@ limitations under the License. See accompanying LICENSE file.
 
 ```
 hadoop.tmp.dir ： hadoop文件系统依赖的基本配置，很多配置路径都依赖它，它的默认位置在/tmp/{$user}下面。linux 重启后/tmp目录会被情空，需要修改位置
+ha.zookeeper.quorum： 配置zookeeper链接地址，主要用在hadoop ha切换时选举active的namenode。
