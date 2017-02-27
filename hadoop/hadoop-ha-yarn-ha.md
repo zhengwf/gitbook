@@ -149,4 +149,5 @@ limitations under the License. See accompanying LICENSE file.
 |dfs.client.failover.proxy.provider.[nameservice ID]|org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider|配置hdfs客户端判断哪个namenode active|
 |dfs.ha.fencing.methods |sshfence|配置隔离失败的namenode的方法：sshfence-ssh方式到失败的namenode，kill掉进程。shell-执行脚本来隔离namenode|
 |dfs.ha.automatic-failover.enabled|true | 设置自动切换namenode
+#### 3.配置zookeeper
 
