@@ -11,8 +11,7 @@
 
 #### 1.修改core-site.xml
 ```
-<
-?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -179,4 +178,10 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 /opt/beh/data/zookeeper/zkServer.sh start
 
 # 启动hdfs
+格式化zk
+```
+[hadoop@hadoop001 hadoop]$ hdfs zkfc -formatZK
+```
+显示日志：ha.ActiveStandbyElector: Successfully created /hadoop-ha/beh in ZK.
+表示格式化成功，主要在zookeeper上创建目录
 
