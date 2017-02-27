@@ -198,8 +198,8 @@ hdfs-site.xml
 |mapreduce.reduce.shuffle.parallelcopies	|50	|从map端抽取数据的并发数
 |mapreduce.jobhistory.address	|hadoop001:10020|	Default port is 10020.
 |mapreduce.jobhistory.webapp.address|hadoop001:19888	|Default port is 19888.
-|mapreduce.jobhistory.intermediate-done-dir	|/mr-history/tmp	|Directory where history files are written by MapReduce jobs.
-|mapreduce.jobhistory.done-dir	|/mr-history/done|	Directory where history files are managed by the MR JobHistory Server.
+|mapreduce.jobhistory.intermediate-done-dir	|/opt/beh/data/jobhistory/tmp	|Directory where history files are written by MapReduce jobs.
+|mapreduce.jobhistory.done-dir	|/opt/beh/data/jobhistory/done|	Directory where history files are managed by the MR JobHistory Server.
 
 	
 
