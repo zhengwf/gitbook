@@ -183,17 +183,18 @@ hdfs-site.xml
 | nodemanager | yarn-site.xml | yarn.nodemanager.log-dirs | /opt/beh/log/yarn | nodemanger日志存储位置，多目录分担IO压力 |
 | nodemanager | yarn-site.xml | yarn.nodemanager.log.retain-seconds | 10800 | 如果日志收集不可用，任务日志在本地存储时间（单位：秒） |
 | nodemanager | yarn-site.xml | yarn.nodemanager.aux-services | mapreduce\_shuffle | Shuffle service that needs to be set for Map Reduce applications. |
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Licensed under the Apache License, Version 2.0 (the "License"); you
-	may not use this file except in compliance with the License. You may obtain
-	a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless
-	required by applicable law or agreed to in writing, software distributed
-	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
-	OR CONDITIONS OF ANY KIND, either express or implied. See the License for
-	the specific language governing permissions and limitations under the License.
-	See accompanying LICENSE file. -->
+    may not use this file except in compliance with the License. You may obtain
+    a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless
+    required by applicable law or agreed to in writing, software distributed
+    under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+    OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+    the specific language governing permissions and limitations under the License.
+    See accompanying LICENSE file. -->
 <configuration>
   <property>
     <name>yarn.nodemanager.aux-services</name>
@@ -216,8 +217,8 @@ hdfs-site.xml
     <value>2048</value>
   </property>
   <property>
-	   <name>yarn.resourcemanager.scheduler.class</name>
-	    <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+       <name>yarn.resourcemanager.scheduler.class</name>
+        <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
   </property>
   <property>
     <name>yarn.nodemanager.resource.memory-mb</name>
@@ -240,8 +241,8 @@ hdfs-site.xml
     <value>mapreduce_shuffle</value>
   </property>
 </configuration>
-
 ```
+
 下面是关于mapreduce的配置，mapred-site.xml
 
 | key | value | 说明 |
@@ -258,7 +259,9 @@ hdfs-site.xml
 | mapreduce.jobhistory.webapp.address | hadoop001:19888 | Default port is 19888. |
 | mapreduce.jobhistory.intermediate-done-dir | /opt/beh/data/jobhistory/tmp | Directory where history files are written by MapReduce jobs. |
 | mapreduce.jobhistory.done-dir | /opt/beh/data/jobhistory/done | Directory where history files are managed by the MR JobHistory Server. |
-[](hadoop.md)
+
+
+
 # 启动yarn
 
 
