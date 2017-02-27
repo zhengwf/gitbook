@@ -163,5 +163,18 @@ server.2=hadoop002:2888:3888
 server.3=hadoop003:2888:3888 
 ```
 ##### 3.分发安装包
+```
+scp -r /opt/beh/core/zookeeper hadoop002:/opt/beh/core
+scp -r /opt/beh/core/zookeeper hadoop003:/opt/beh/core
+```
 ##### 4.修改/opt/beh/data/zookeeper/myid 
-##### 5.启动zookeeper
+```
+ssh hadoop001 "mkdir /opt/beh/data/zookeeper ; echo '1' >/opt/beh/data/zookeeper/myid ";
+ssh hadoop002 "mkdir /opt/beh/data/zookeeper ; echo '2' >/opt/beh/data/zookeeper/myid  ";
+ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper/myid  ";
+
+```
+##### 5.配置环境变量（非必要，为了使用方便）
+##### 6.启动zookeeper
+
+
