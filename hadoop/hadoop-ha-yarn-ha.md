@@ -162,3 +162,6 @@ server.1=hadoop001:2888:3888
 server.2=hadoop002:2888:3888  
 server.3=hadoop003:2888:3888 
 ```
+##### 3.分发安装包
+##### 4.修改/opt/beh/data/zookeeper/myid 
+##### 5.启动zookeeper
