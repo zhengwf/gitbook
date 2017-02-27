@@ -186,4 +186,6 @@ ssh hadoop003 "mkdir /opt/beh/data/zookeeper ; echo '3' >/opt/beh/data/zookeeper
 表示格式化成功，主要在zookeeper上创建目录
 ##### 2.启动journalnode
 在hadoop001，hadoop002，hadoop003上执行
+```
 hadoop-deamon.sh start journalnode
+```
