@@ -136,3 +136,9 @@ limitations under the License. See accompanying LICENSE file.
 </configuration>
 
 ```
+|配置项|值|说明|
+|--|--|--|
+|dfs.nameservices| beh |nameservices 的逻辑名，也是namespace的名称|
+|dfs.ha.namenodes.[nameservice ID] | nn1,nn2 |nameservice中namenode的标识符|
+|dfs.namenode.rpc-address.[nameservice ID].[name node ID]|hadoop001:8020|namenode监听的rpc地址
+
