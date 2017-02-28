@@ -19,8 +19,25 @@
    mysqladmin -u root password '123456'
 - 重置root密码
 
-```
- 停止服务： service mysqld stop
-
-```
+  ```
+   停止服务： service mysqld stop
+   跳过授权表启动： mysqld_safe --skip-grant-tables &
+   登录mysql ： mysql -uroot 
+   执行mysql命令：
+   mysql> use mysql;
+   Reading table information for completion of table and column names
+   You can turn off this feature to get a quicker startup with -A
+   
+   Database changed
+   mysql> update user set password=PASSWORD('123456') where user="root"
+       -> ;
+   Query OK, 3 rows affected (0.00 sec)
+   Rows matched: 3  Changed: 3  Warnings: 0
+   
+   mysql> flush privileges;
+   Query OK, 0 rows affected (0.00 sec)
+   
+   mysql> quit
+   
+  ```
 
