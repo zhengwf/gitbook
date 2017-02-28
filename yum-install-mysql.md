@@ -14,3 +14,4 @@
  [root@hadoop003 ~]# chkconfig --list |grep mysql
   mysqld         	0:关闭	1:关闭	2:启用	3:启用	4:启用	5:启用	6:关闭
 ```
+- 设置root密码
