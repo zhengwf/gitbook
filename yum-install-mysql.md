@@ -17,5 +17,6 @@
 - 设置root密码
   
    mysqladmin -u root password '123456'
-- 重置密码
+- 重置root密码
+
 
