@@ -38,6 +38,6 @@
    Query OK, 0 rows affected (0.00 sec)
    
    mysql> quit
-   
+   kill 掉mysql 进程，重新正常启动
   ```
 
