@@ -19,4 +19,8 @@
    mysqladmin -u root password '123456'
 - 重置root密码
 
+```
+ 停止服务： service mysqld stop
+
+```
 
