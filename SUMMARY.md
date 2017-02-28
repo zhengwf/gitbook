@@ -7,5 +7,5 @@
   * [HA配置](hadoop/hadoop-ha-yarn-ha.md)
   * [脚本部署](hadoop/install-by-shell.md)
 * mysql
-  * [yum install mysql](yum-install-mysql.md)
+  * [yum安装mysql](yum-install-mysql.md)
 
