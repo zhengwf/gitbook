@@ -40,4 +40,6 @@
    mysql> quit
    # kill 掉mysql 进程，重新正常启动
   ```
-
+- 设置远程登录权限
+ 
+  在mysql数据库中执行：GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '你的密码' WITH GRANT OPTION;
