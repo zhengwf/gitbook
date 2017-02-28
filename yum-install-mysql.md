@@ -20,10 +20,10 @@
 - 重置root密码
 
   ```
-   停止服务： service mysqld stop
-   跳过授权表启动： mysqld_safe --skip-grant-tables &
-   登录mysql ： mysql -uroot 
-   执行mysql命令：
+   # 停止服务： service mysqld stop
+   # 跳过授权表启动： mysqld_safe --skip-grant-tables &
+   # 登录mysql ： mysql -uroot 
+   # 执行mysql命令：
    mysql> use mysql;
    Reading table information for completion of table and column names
    You can turn off this feature to get a quicker startup with -A
@@ -38,6 +38,6 @@
    Query OK, 0 rows affected (0.00 sec)
    
    mysql> quit
-   kill 掉mysql 进程，重新正常启动
+   # kill 掉mysql 进程，重新正常启动
   ```
 
