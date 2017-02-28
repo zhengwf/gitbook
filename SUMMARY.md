@@ -8,4 +8,6 @@
   * [脚本部署](hadoop/install-by-shell.md)
 * mysql
   * [yum安装mysql](yum-install-mysql.md)
+* [hbase](hbase.md)
+  * [acl](hbase/acl.md)
 
