@@ -19,12 +19,14 @@
   ```
 
 * 分发配置文件
+
 * 格式化namenode
   ```
        格式化namenode 需要注意失败时处理办法，和结果获取。重新格式化之前，清理历史数据，特别是datanode的数据目录
   ```
 * 启动服务
 * 测试服务
+
   ```
        测试服务能够正常运行，如果可以，给出标准的测试性能报告。
   ```
@@ -32,15 +34,18 @@
   # 脚本安排
 
   单独脚本
+
 * 脚本免密 
   * 使用所有用户
   * 不需要重复输入密码
   * 如果有错误能够正常提示
 * 修改句柄，防火墙，selinux ，host，创建用户
 * hadoop 安装脚本 包含调度其他脚本。
+
   # 依赖
 
   需要提前安装java，zookeeper（ha 模式下需要），ssh 服务
+
   # 使用root 设置环境变量
 
 ```bash
@@ -138,8 +143,11 @@ then
   useradd -d /home/hadoop hadoop
   echo "hadoop"|passwd --stdin hadoop
 fi
-
 ```
+
+# 3. ssh免密登录
+
+
 
 
 
