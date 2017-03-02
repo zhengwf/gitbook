@@ -226,7 +226,5 @@ done < $basepath/conf/hosts
 
 ## 4. 单机安装
 
-
-
-
+使用root用户做前置工作，后期用hadoop用户
 
