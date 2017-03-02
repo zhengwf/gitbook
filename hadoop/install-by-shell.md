@@ -224,5 +224,9 @@ done < $basepath/conf/hosts
       echo "请确认服务器上已安装ssh服务"
     fi
 
+## 4. 单机安装
+
+
+
 
 
