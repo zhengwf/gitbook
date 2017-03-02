@@ -27,6 +27,7 @@
   ```
 
 * 启动服务
+
 * 测试服务
 
   ```
@@ -44,6 +45,7 @@
   * 如果有错误能够正常提示
 
 * 修改句柄，防火墙，selinux ，host，创建用户
+
 * hadoop 安装脚本 包含调度其他脚本。
 
   # 依赖
@@ -54,7 +56,11 @@
 
 ```bash
 #! /bin/bash
-
+# 调用前配置conf/default-config.sh
+# 需要在每台机器上执行这个脚本，调用时需要传递当前主机名
+HOSTNAME=$1
+basepath=$(cd `dirname $0`;cd ../; pwd);
+/bin/sh ${basepath}/conf/default-config.sh
 OS="undefined"
 DIST="undefined"
 REV="undefined"
@@ -118,7 +124,7 @@ fi
 # 关闭selinux
 echo "close selinux"
 /usr/sbin/setenforce 0
-sed -i '/SELINUX/s/enforcing/disabled/' /etc/selinux/config
+/bin/sed -i '/SELINUX/s/enforcing/disabled/' /etc/selinux/config
 # 修改句柄
 if [ $(grep -c hadoop  /etc/security/limits.conf)  -lt  2 ]
 then
@@ -145,11 +151,70 @@ id hadoop >> /dev/null
 if [ $? -ne  0 ]
 then
   useradd -d /home/hadoop hadoop
-  echo "hadoop"|passwd --stdin hadoop
+  echo "$HADOOP_PASSWORD"|passwd --stdin hadoop
 fi
+
+# 修改主机列表 注：主机名不能有下划线
+while read line
+do
+  ip=`echo $line |awk -F' ' '{print $1}' `
+  if [ $(grep -c "$ip" /etc/hosts)  -le 0 ]
+  then
+    echo $line >> /etc/hosts
+  fi
+done < $basepath/conf/hosts
+
+# 修改主机名，先不做需要判断是那台主机，然后修改主机名
+#/bin/sed -i "s/HOSTNAME=.*/HOSTNAME=${HOSTNAME}/g" /etc/sysconfig/network
+# 不用重启就可生效
+#echo ${HOSTNAME} >/proc/sys/kernel/hostname
+
 ```
 
 # 3. ssh免密登录
 
 查找了网上ssh免密的做法，大多数使用expect做ssh免密，但是前提需要安装expect ，在离线环境下，安装组件有点复杂。那么可以用户jsch 去做ssh免密吗。下边是尝试的过程。遇见问题： ssh 免密后know\_hosts文件怎么生成，里边存储了什么内容？ 网上都说存储了一个公钥，就没有进一步说明，存储了什么公钥，我可以在机器上找到吗？ 答案：可以，在cat /etc/ssh/ssh\_host\_ecdsa\_key.pub中，ecdsa 是加密方式。
+
+    #！/bin/bash
+    #echo y|ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ''
+    basepath=$(cd `dirname $0`;cd ../; pwd);
+    /bin/sh ${basepath}/conf/default-config.sh
+    if [ "$JAVA_HOME" = "" ]
+    then
+      JAVA_HOME=/opt/beh/core/jdk
+    fi
+    #先生成hadoop的公私钥，然后复制到 ~/.ssh/authorized_keys文件中，同时设置目录权限，检查/etc/ssh/sshd_config
+
+    #设置/etc/ssh/sshd_config
+    if [ -f /etc/ssh/sshd_config ]
+    then
+      /bin/sed -i '/RSAAuthentication/s/no/yes/' /etc/ssh/sshd_config
+      /bin/sed -i '/PubkeyAuthentication/s/no/yes/' /etc/ssh/sshd_config
+      #生成公私钥
+      echo y|ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ''
+      #本地免密
+      cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+      chmod -R 700 ~/.ssh
+      chmod 600 ~/.ssh/authorized_keys
+      # 把公钥写入known_hosts文件中
+      HOSTNAME=`hostname`
+      HOSTNAME_AND_IP=`grep $HOSTNAME /etc/hosts|awk -F' ' '{print $2","$1}'`
+      if [ ! -f ~/.ssh/known_hosts ]
+      then
+          echo "" >> ~/.ssh/known_hosts
+      fi
+      cat /etc/ssh/ssh_host_*_key.pub | while read i
+      do
+        if [  $(grep -c "$i" ~/.ssh/known_hosts)  -le 0  ]
+        then
+          echo ${HOSTNAME_AND_IP}' '${i} >> ~/.ssh/known_hosts
+          echo 'localhost '${i} >> ~/.ssh/known_hosts
+        fi
+      done
+    else
+      echo "请确认服务器上已安装ssh服务"
+    fi
+
+
+
 
