@@ -231,12 +231,9 @@ done < $basepath/conf/hosts
 * 复制安装脚本，和安装包到机器的root用户下
 * 执行setEnv-by-root.sh
 * 执行nopasswd.sh
+* 安装jdk
 * 解压安装包，配置参数
 * 启动hadoop
-
-
-
-
 
 
 
