@@ -12,4 +12,10 @@
   * [acl](hbase/acl.md)
 * java
   * [脚本安装jdk](install-by-shell.md)
+* [linux](linux.md)
+  * [基础](linux/base.md)
+  * 判断
+  * grep
+  * sed
+  * awk
 
