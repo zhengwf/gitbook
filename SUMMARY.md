@@ -16,6 +16,6 @@
   * [基础](linux/base.md)
   * [判断](linux/if.md)
   * [grep](linux/grep.md)
-  * sed
+  * [sed](linux/sed.md)
   * awk
 
