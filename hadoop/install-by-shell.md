@@ -54,6 +54,8 @@
 
   # 使用root 设置环境变量
 
+ 调用时需要传递本机主机名，需要在每台机器上执行这个脚本，在整体的调度脚本调用。
+
 ```bash
 #! /bin/bash
 # 调用前配置conf/default-config.sh
@@ -168,7 +170,6 @@ done < $basepath/conf/hosts
 #/bin/sed -i "s/HOSTNAME=.*/HOSTNAME=${HOSTNAME}/g" /etc/sysconfig/network
 # 不用重启就可生效
 #echo ${HOSTNAME} >/proc/sys/kernel/hostname
-
 ```
 
 # 3. ssh免密登录
@@ -214,6 +215,7 @@ done < $basepath/conf/hosts
     else
       echo "请确认服务器上已安装ssh服务"
     fi
+
 
 
 
