@@ -226,5 +226,12 @@ done < $basepath/conf/hosts
 
 ## 4. 单机安装
 
-使用root用户做前置工作，后期用hadoop用户
+使用root用户做前置工作，后期用hadoop用户。需要把安装脚本复制到机器上。
+
+* 复制安装脚本，和安装包到机器的root用户下
+* 执行setEnv-by-root.sh
+* 执行nopasswd.sh
+* 执行install-hadoop.sh
+* 
+
 
