@@ -233,7 +233,7 @@ done < $basepath/conf/hosts
 * 执行setEnv-by-root.sh
 * 执行nopasswd.sh
 * 安装jdk 
-  * 假设已经安装完成
+  * 假设已经安装完成，在依赖关系分析时安装
 * 解压安装包，配置参数
 * 启动hadoop
 
