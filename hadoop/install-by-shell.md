@@ -232,11 +232,10 @@ done < $basepath/conf/hosts
   * 这个步骤可以在统一调度那块做，这个脚本可以不提供
 * 执行setEnv-by-root.sh
 * 执行nopasswd.sh
-* 安装jdk
+* 安装jdk 
+  * 假设已经安装完成
 * 解压安装包，配置参数
 * 启动hadoop
-
-
 
 
 
