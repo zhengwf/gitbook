@@ -8,23 +8,33 @@
   #调度方式： sh jdk-install.sh jdk-7u55-linux-x64.tar.gz
   # 其他参数修改default-conf.sh
   basepath=$(cd `dirname $0`; pwd);
-  #/bin/sh ${basepath}/default-config.sh
-  BEH_HOME=/opt/beh
+  source ${basepath}/default-config.sh
   JDK_PACKAGE=$1
   # 解压后jdk 的名字变了/(ㄒoㄒ)/~~
-  /bin/tar -zvxf ${basepath}/$JDK_PACKAGE
-  PACKAGE=`ls -l ${basepath} |grep jdk |grep -v tar.gz |grep ^d |awk '{print $NF}'`
+  PACKAGE_PATH=$(cd `dirname $JDK_PACKAGE`;pwd)
+  /bin/tar -zxf $JDK_PACKAGE -C $PACKAGE_PATH
+  PACKAGE=`ls -l ${PACKAGE_PATH} |grep jdk |grep -v tar.gz |grep ^d |awk '{print $NF}'`
   # 清理以前解压出来的jdk包
-  rm -rf  ${basepath}/jdk
-  mv ${basepath}/$PACKAGE ${basepath}/jdk
+  rm -rf  ${PACKAGE_PATH}/jdk
+  mv ${PACKAGE_PATH}/$PACKAGE ${PACKAGE_PATH}/jdk
   # 创建jdk安装目录
+  if [ $BEH_HOME = '' ]
+  then
+    BEH_HOME=/opt/beh
+  fi
   if [ ! -d $BEH_HOME/core ]
   then
+    echo "create $BEH_HOME/core";
     mkdir -p $BEH_HOME/core
+  else
+    echo "$BEH_HOME/core has exist"
   fi
   if [ ! -d $BEH_HOME/conf ]
   then
+    echo "create $BEH_HOME/conf";
     mkdir $BEH_HOME/conf
+  else
+    echo "$BEH_HOME/core has exist"
   fi
   if [ ! -f $BEH_HOME/conf/beh_env ]
   then
@@ -35,7 +45,7 @@
   then
     rm -rf $BEH_HOME/core/jdk
   fi
-  mv -f ${basepath}/jdk $BEH_HOME/core/
+  mv -f ${PACKAGE_PATH}/jdk $BEH_HOME/core/
   chown -R hadoop:hadoop $BEH_HOME/core/
   if [ $(grep -c $BEH_HOME/conf/beh_env /etc/profile) -lt 1 ]
   then
