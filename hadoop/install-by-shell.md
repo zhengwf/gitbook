@@ -229,11 +229,14 @@ done < $basepath/conf/hosts
 使用root用户做前置工作，后期用hadoop用户。需要把安装脚本复制到机器上。
 
 * 复制安装脚本，和安装包到机器的root用户下
+  * 这个步骤可以在统一调度那块做，这个脚本可以不提供
 * 执行setEnv-by-root.sh
 * 执行nopasswd.sh
 * 安装jdk
 * 解压安装包，配置参数
 * 启动hadoop
+
+
 
 
 

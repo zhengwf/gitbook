@@ -10,7 +10,7 @@
   * [yum安装mysql](yum-install-mysql.md)
 * [hbase](hbase.md)
   * [acl](hbase/acl.md)
-* java
+* [java](java.md)
   * [脚本安装jdk](install-by-shell.md)
 * [linux](linux.md)
   * [基础](linux/base.md)
