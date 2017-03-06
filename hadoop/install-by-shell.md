@@ -258,7 +258,6 @@ if [ "$BEH_HOME" = '' ]
 then
   BEH_HOME=/opt/beh
 fi
-
 echo "create user hadoop "
 id hadoop >> /dev/null
 if [ $? -ne  0 ]
@@ -270,17 +269,23 @@ fi
 su - hadoop -c "java -version"
 if [ $? -ne - ]
 then
-  echo "java is not enable for user hadoop";
-  exit -1;
+echo "java is not enable for user hadoop";
+exit -1;
 fi
 #如果放在root 家目录下，是不可能有执行权限的，怎么处理？？？？？
+# 执行hadoop 用户本地 免密
 cp -r -u $basepath /tmp
 su - hadoop -c "/bin/bash /tmp/hadoop/shell/nopassword.sh"
+# 解压安装包
 /usr/bin/tar -zxf $HADOOP_TAR -C $BEH_HOME/core
 HADOOP_PACKAGE=`echo $HADOOP_TAR |awk -F'/' '{print $NF}'|sed "s/.tar.gz//g"`
 mv $BEH_HOME/core/$HADOOP_PACKAGE $BEH_HOME/core/hadoop
-echo "export HADOOP_HOME=${BEH_HOME}/core/hadoop" >> $BEH_HOME/conf/beh_env
-echo 'PATH=$PATH:$HADOOP_HOME/bin' >> $BEH_HOME/conf/beh_env
+# 配置环境变量
+if [ $(grep -c HADOOP_HOME=${BEH_HOME}/core/hadoop $BEH_HOME/conf/beh_env) -lt 1 ]
+then
+  echo "export HADOOP_HOME=${BEH_HOME}/core/hadoop" >> $BEH_HOME/conf/beh_env
+  echo 'PATH=$PATH:$HADOOP_HOME/bin' >> $BEH_HOME/conf/beh_env
+fi
 chown -R hadoop:hadoop $BEH_HOME
 
 echo "intsll success"
