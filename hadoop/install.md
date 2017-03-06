@@ -164,67 +164,7 @@ STARTUP_MSG:   classpath = /opt/beh/core/hadoop/etc/hadoop:/opt/beh/core/hadoop/
 STARTUP_MSG:   build = http://github.com/cloudera/hadoop -r e8ff3af7cda597c024c980707fbb02fce16dc79a; compiled by 'jenkins' on 2016-11-02T19:01Z
 STARTUP_MSG:   java = 1.7.0_55
 ************************************************************/
-17/02/23 16:47:57 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
-17/02/23 16:47:57 INFO namenode.NameNode: createNameNode [-format]
-17/02/23 16:47:57 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-Formatting using clusterid: CID-509edbef-226f-4a5b-a86d-d4ce6d4e6a7e
-17/02/23 16:47:58 INFO namenode.FSEditLog: Edit logging is async:false
-17/02/23 16:47:58 INFO namenode.FSNamesystem: No KeyProvider found.
-17/02/23 16:47:58 INFO namenode.FSNamesystem: fsLock is fair:true
-17/02/23 16:47:58 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
-17/02/23 16:47:58 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: The block deletion will start around 2017 二月 23 16:47:58
-17/02/23 16:47:58 INFO util.GSet: Computing capacity for map BlocksMap
-17/02/23 16:47:58 INFO util.GSet: VM type       = 64-bit
-17/02/23 16:47:58 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
-17/02/23 16:47:58 INFO util.GSet: capacity      = 2^21 = 2097152 entries
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: defaultReplication         = 1
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: maxReplication             = 512
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: minReplication             = 1
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
-17/02/23 16:47:58 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
-17/02/23 16:47:58 INFO namenode.FSNamesystem: fsOwner             = hadoop (auth:SIMPLE)
-17/02/23 16:47:58 INFO namenode.FSNamesystem: supergroup          = supergroup
-17/02/23 16:47:58 INFO namenode.FSNamesystem: isPermissionEnabled = true
-17/02/23 16:47:58 INFO namenode.FSNamesystem: HA Enabled: false
-17/02/23 16:47:58 INFO namenode.FSNamesystem: Append Enabled: true
-17/02/23 16:47:58 INFO util.GSet: Computing capacity for map INodeMap
-17/02/23 16:47:58 INFO util.GSet: VM type       = 64-bit
-17/02/23 16:47:58 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
-17/02/23 16:47:58 INFO util.GSet: capacity      = 2^20 = 1048576 entries
-17/02/23 16:47:58 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? false
-17/02/23 16:47:58 INFO namenode.NameNode: Caching file names occuring more than 10 times
-17/02/23 16:47:58 INFO util.GSet: Computing capacity for map cachedBlocks
-17/02/23 16:47:58 INFO util.GSet: VM type       = 64-bit
-17/02/23 16:47:58 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
-17/02/23 16:47:58 INFO util.GSet: capacity      = 2^18 = 262144 entries
-17/02/23 16:47:58 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
-17/02/23 16:47:58 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
-17/02/23 16:47:58 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
-17/02/23 16:47:58 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
-17/02/23 16:47:58 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
-17/02/23 16:47:58 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
-17/02/23 16:47:58 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
-17/02/23 16:47:58 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
-17/02/23 16:47:58 INFO util.GSet: Computing capacity for map NameNodeRetryCache
-17/02/23 16:47:58 INFO util.GSet: VM type       = 64-bit
-17/02/23 16:47:58 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
-17/02/23 16:47:58 INFO util.GSet: capacity      = 2^15 = 32768 entries
-17/02/23 16:47:58 INFO namenode.FSNamesystem: ACLs enabled? false
-17/02/23 16:47:58 INFO namenode.FSNamesystem: XAttrs enabled? true
-17/02/23 16:47:58 INFO namenode.FSNamesystem: Maximum size of an xattr: 16384
-17/02/23 16:47:58 INFO namenode.FSImage: Allocated new BlockPoolId: BP-814865150-172.16.31.206-1487839678501
-17/02/23 16:47:58 INFO common.Storage: Storage directory /tmp/hadoop-hadoop/dfs/name has been successfully formatted.
-17/02/23 16:47:58 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
-17/02/23 16:47:58 INFO util.ExitUtil: Exiting with status 0
-17/02/23 16:47:58 INFO namenode.NameNode: SHUTDOWN_MSG: 
-/************************************************************
-SHUTDOWN_MSG: Shutting down NameNode at hadoop001/172.16.31.206
-************************************************************/
+
 # 启动hdfs
 [hadoop@hadoop001 hadoop]$ ./sbin/start-dfs.sh 
 17/02/23 16:50:48 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
