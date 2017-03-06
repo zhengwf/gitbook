@@ -237,45 +237,47 @@ done < $basepath/conf/hosts
 * 解压安装包，配置参数
 * 启动hadoop
 
-    #!/bin/bash
-    #------------------
-    # 需要参数： hadoop安装包
-    # 安装单机版hadoop
-    #
-    # 需要在root用户下执行
-    #
-    # 安装步骤：
-    # 1.设置环境变量 --- 不需要
-    # 2. hadoop 用户本地免密
-    # 3. 在hadoop用户下解压安装包，
-    HADOOP_TAR=$1
-    basepath=$(cd `dirname $0`;cd ../; pwd);
-    . $basepath/conf/default-config.sh
-    #修改环境变量
-    #/bin/bash $basepath/shell/setEnv-by-root.sh
-    if [ "$BEH_HOME" = '' ]
-    then
-      BEH_HOME=/opt/beh
-    fi
-    echo "create user hadoop "
-    id hadoop >> /dev/null
-    if [ $? -ne  0 ]
-    then
-      useradd -d /home/hadoop hadoop
-      echo "$HADOOP_PASSWORD"|passwd --stdin hadoop
-    fi
-    #如果放在root 家目录下，是不可能有执行权限的，怎么处理？？？？？
-    cp -r -u $basepath /tmp
-    su - hadoop -c "/bin/bash /tmp/hadoop/shell/nopassword.sh"
-    /usr/bin/tar -zxf $HADOOP_TAR -C $BEH_HOME/core
-    HADOOP_PACKAGE=`echo $HADOOP_TAR |awk -F'/' '{print $NF}'|sed "s/.tar.gz//g"`
-    mv $BEH_HOME/core/$HADOOP_PACKAGE $BEH_HOME/core/hadoop
-    echo "export HADOOP_HOME=${BEH_HOME}/core/hadoop" >> $BEH_HOME/conf/beh_env
-    echo 'PATH=$PATH:$HADOOP_HOME/bin' >> $BEH_HOME/conf/beh_env
-    chown -R hadoop:hadoop $BEH_HOME
+```
+#!/bin/bash
+#------------------
+# 需要参数： hadoop安装包
+# 安装单机版hadoop
+#
+# 需要在root用户下执行
+#
+# 安装步骤：
+# 1.设置环境变量 --- 不需要
+# 2. hadoop 用户本地免密
+# 3. 在hadoop用户下解压安装包，
+HADOOP_TAR=$1
+basepath=$(cd `dirname $0`;cd ../; pwd);
+. $basepath/conf/default-config.sh
+#修改环境变量
+#/bin/bash $basepath/shell/setEnv-by-root.sh
+if [ "$BEH_HOME" = '' ]
+then
+  BEH_HOME=/opt/beh
+fi
+echo "create user hadoop "
+id hadoop >> /dev/null
+if [ $? -ne  0 ]
+then
+  useradd -d /home/hadoop hadoop
+  echo "$HADOOP_PASSWORD"|passwd --stdin hadoop
+fi
+#如果放在root 家目录下，是不可能有执行权限的，怎么处理？？？？？
+cp -r -u $basepath /tmp
+su - hadoop -c "/bin/bash /tmp/hadoop/shell/nopassword.sh"
+/usr/bin/tar -zxf $HADOOP_TAR -C $BEH_HOME/core
+HADOOP_PACKAGE=`echo $HADOOP_TAR |awk -F'/' '{print $NF}'|sed "s/.tar.gz//g"`
+mv $BEH_HOME/core/$HADOOP_PACKAGE $BEH_HOME/core/hadoop
+echo "export HADOOP_HOME=${BEH_HOME}/core/hadoop" >> $BEH_HOME/conf/beh_env
+echo 'PATH=$PATH:$HADOOP_HOME/bin' >> $BEH_HOME/conf/beh_env
+chown -R hadoop:hadoop $BEH_HOME
 
-    echo "intsll success"
+echo "intsll success"
 
+```
 
 
 
