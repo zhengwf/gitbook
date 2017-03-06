@@ -270,14 +270,12 @@ fi
 su - hadoop -c "java -version"
 if [ $? -ne - ]
 then
-echo "java is not enable for user hadoop";
-exit -1;
+  echo "java is not enable for user hadoop";
+  exit -1;
 fi
 #如果放在root 家目录下，是不可能有执行权限的，怎么处理？？？？？
 cp -r -u $basepath /tmp
 su - hadoop -c "/bin/bash /tmp/hadoop/shell/nopassword.sh"
-
-
 /usr/bin/tar -zxf $HADOOP_TAR -C $BEH_HOME/core
 HADOOP_PACKAGE=`echo $HADOOP_TAR |awk -F'/' '{print $NF}'|sed "s/.tar.gz//g"`
 mv $BEH_HOME/core/$HADOOP_PACKAGE $BEH_HOME/core/hadoop
