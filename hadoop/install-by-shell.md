@@ -258,6 +258,7 @@ if [ "$BEH_HOME" = '' ]
 then
   BEH_HOME=/opt/beh
 fi
+
 echo "create user hadoop "
 id hadoop >> /dev/null
 if [ $? -ne  0 ]
@@ -265,9 +266,18 @@ then
   useradd -d /home/hadoop hadoop
   echo "$HADOOP_PASSWORD"|passwd --stdin hadoop
 fi
+#判断java 是否可用
+su - hadoop -c "java -version"
+if [ $? -ne - ]
+then
+echo "java is not enable for user hadoop";
+exit -1;
+fi
 #如果放在root 家目录下，是不可能有执行权限的，怎么处理？？？？？
 cp -r -u $basepath /tmp
 su - hadoop -c "/bin/bash /tmp/hadoop/shell/nopassword.sh"
+
+
 /usr/bin/tar -zxf $HADOOP_TAR -C $BEH_HOME/core
 HADOOP_PACKAGE=`echo $HADOOP_TAR |awk -F'/' '{print $NF}'|sed "s/.tar.gz//g"`
 mv $BEH_HOME/core/$HADOOP_PACKAGE $BEH_HOME/core/hadoop
