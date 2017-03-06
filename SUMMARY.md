@@ -6,6 +6,9 @@
   * [2.2 完全分布式安装](hadoop/install-fully-distributed.md)
   * [2.3 HA配置](hadoop/hadoop-ha-yarn-ha.md)
   * [2.4 脚本部署](hadoop/install-by-shell.md)
+    * [单机安装](hadoop/install-by-shell/install-one-node.md)
+    * [伪分布式安装](hadoop/install-by-shell/.md)
+    * 完全分布式安装
 * mysql
   * [yum安装mysql](yum-install-mysql.md)
 * [hbase](hbase.md)
